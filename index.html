@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<!-- saved from url=(0248)file:///Users/vincentclaeys/Library/Application%20Support/Claude/local-agent-mode-sessions/811ee228-3d42-4e3d-9cb6-3529321ea519/6c15fa41-3e85-41d8-b722-5ec2689b87d3/local_a5354916-9dbb-44a5-8ff2-654f6c90b416/outputs/vincent-workshop-offer-page.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Copilot. Actually Used. — Vincent Claeys</title>
-  <link href="./Offer Doc_files/css2" rel="stylesheet">
-  <link href="./Offer Doc_files/css2(1)" rel="stylesheet">
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Copilot. Actually Used. · Vincent Claeys</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     :root {
       --brand-dark:    #0F172A;
@@ -34,14 +34,12 @@
       color: var(--brand-dark);
     }
 
-    /* ── Layout ── */
     .page-wrap {
       max-width: 760px;
       margin: 0 auto;
       padding: 3rem 1.5rem 5rem;
     }
 
-    /* ── Header / logo ── */
     .site-header {
       max-width: 760px;
       margin: 0 auto;
@@ -62,19 +60,14 @@
       text-transform: uppercase;
     }
 
-    /* ── Divider ── */
     .accent-rule {
       border: none;
       border-top: 2px solid var(--brand-primary);
       opacity: 0.18;
       margin: 2rem 0;
     }
-    .accent-rule--strong {
-      opacity: 1;
-      border-top-width: 3px;
-    }
+    .accent-rule--strong { opacity: 1; border-top-width: 3px; }
 
-    /* ── Section labels ── */
     .section-label {
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.7rem;
@@ -85,17 +78,14 @@
       margin-bottom: 0.5rem;
     }
 
-    /* ── Typography ── */
     h1 { font-size: 2.5rem; line-height: 1.15; margin-bottom: 1.25rem; }
     h2 { font-size: 1.6rem; line-height: 1.25; margin-top: 2.5rem; margin-bottom: 0.9rem; }
     h3 { font-size: 1.15rem; line-height: 1.3; margin-top: 1.75rem; margin-bottom: 0.6rem; }
 
     p { margin-bottom: 1rem; }
     p:last-child { margin-bottom: 0; }
-
     strong { font-weight: 600; }
 
-    /* ── Subheadline ── */
     .subheadline {
       font-size: 1.1rem;
       font-weight: 400;
@@ -104,7 +94,6 @@
       margin-bottom: 2rem;
     }
 
-    /* ── Opening hook ── */
     .hook-block {
       border-left: 3px solid var(--brand-primary);
       padding: 1.25rem 1.5rem;
@@ -112,12 +101,8 @@
       background: rgba(50,43,221,0.04);
       border-radius: 0 8px 8px 0;
     }
-    .hook-block p {
-      font-size: 1.05rem;
-      line-height: 1.7;
-    }
+    .hook-block p { font-size: 1.05rem; line-height: 1.7; }
 
-    /* ── Callout boxes ── */
     .callout {
       background: rgba(249,115,22,0.09);
       border-left: 4px solid var(--hl-orange);
@@ -129,20 +114,10 @@
       margin: 1.25rem 0;
       color: var(--brand-dark);
     }
-    .callout--green {
-      background: rgba(16,185,129,0.09);
-      border-left-color: var(--hl-green);
-    }
-    .callout--blue {
-      background: rgba(50,43,221,0.07);
-      border-left-color: var(--brand-primary);
-    }
-    .callout--rose {
-      background: rgba(244,63,94,0.08);
-      border-left-color: var(--hl-rose);
-    }
+    .callout--green  { background: rgba(16,185,129,0.09);  border-left-color: var(--hl-green); }
+    .callout--blue   { background: rgba(50,43,221,0.07);   border-left-color: var(--brand-primary); }
+    .callout--rose   { background: rgba(244,63,94,0.08);   border-left-color: var(--hl-rose); }
 
-    /* ── Bullet list ── */
     ul.signal-list {
       list-style: none;
       padding: 0;
@@ -163,35 +138,104 @@
       font-weight: 600;
     }
 
-    /* ── Tier cards ── */
-    .tier-grid {
+    /* Stats bar */
+    .stats-bar {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.25rem;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
       margin: 1.5rem 0;
     }
+    .stat-item {
+      background: #fff;
+      border: 1.5px solid rgba(15,23,42,0.1);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      text-align: center;
+    }
+    .stat-number {
+      font-family: 'Aptos', 'Calibri', 'Helvetica Neue', sans-serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--brand-primary);
+      line-height: 1.1;
+      margin-bottom: 0.2rem;
+    }
+    .stat-label {
+      font-size: 0.78rem;
+      color: rgba(15,23,42,0.55);
+      line-height: 1.3;
+    }
+
+    /* Testimonials */
+    .testimonial-grid {
+      display: grid;
+      gap: 0.9rem;
+      margin: 1.25rem 0;
+    }
+    .testimonial-card {
+      background: #fff;
+      border: 1.5px solid rgba(15,23,42,0.1);
+      border-radius: 9px;
+      padding: 1.1rem 1.25rem;
+    }
+    .testimonial-card--participant {
+      border-left: 3px solid var(--hl-orange);
+    }
+    .testimonial-card--partner {
+      border-left: 3px solid var(--brand-primary);
+    }
+    .testimonial-quote {
+      font-size: 0.93rem;
+      line-height: 1.6;
+      color: var(--brand-dark);
+      margin-bottom: 0.6rem;
+      font-style: italic;
+    }
+    .testimonial-quote::before { content: "\201C"; }
+    .testimonial-quote::after  { content: "\201D"; }
+    .testimonial-author {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: rgba(15,23,42,0.45);
+    }
+    .testimonial-logo-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      align-items: center;
+      margin-top: 1rem;
+    }
+    .logo-slot {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: rgba(15,23,42,0.3);
+      border: 1px dashed rgba(15,23,42,0.15);
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
+    }
+
+    /* Tier cards */
+    .tier-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; margin: 1.5rem 0; }
     .tier-card {
       border: 1.5px solid rgba(15,23,42,0.12);
       border-radius: 10px;
       padding: 1.5rem 1.75rem;
       background: #fff;
     }
-    .tier-card--featured {
-      border-color: var(--brand-primary);
-      border-width: 2px;
-    }
+    .tier-card--featured { border-color: var(--brand-primary); border-width: 2px; }
     .tier-name {
       font-family: 'Aptos', 'Calibri', 'Helvetica Neue', sans-serif;
       font-weight: 700;
       font-size: 1.15rem;
       margin-bottom: 0.25rem;
     }
-    .tier-tagline {
-      font-size: 0.875rem;
-      color: rgba(15,23,42,0.55);
-      margin-bottom: 1rem;
-      font-style: italic;
-    }
+    .tier-tagline { font-size: 0.875rem; color: rgba(15,23,42,0.55); margin-bottom: 1rem; font-style: italic; }
     .tier-price {
       font-family: 'JetBrains Mono', monospace;
       font-size: 1.5rem;
@@ -199,11 +243,7 @@
       color: var(--brand-primary);
       margin-bottom: 1rem;
     }
-    .tier-includes {
-      list-style: none;
-      padding: 0;
-      margin-bottom: 1rem;
-    }
+    .tier-includes { list-style: none; padding: 0; margin-bottom: 1rem; }
     .tier-includes li {
       padding: 0.3rem 0 0.3rem 1.4rem;
       position: relative;
@@ -211,20 +251,8 @@
       border-bottom: 1px solid rgba(15,23,42,0.06);
     }
     .tier-includes li:last-child { border-bottom: none; }
-    .tier-includes li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: var(--hl-green);
-      font-weight: 700;
-    }
-    .tier-note {
-      font-size: 0.85rem;
-      color: rgba(15,23,42,0.55);
-      line-height: 1.5;
-      margin-top: 0.75rem;
-      font-style: italic;
-    }
+    .tier-includes li::before { content: "✓"; position: absolute; left: 0; color: var(--hl-green); font-weight: 700; }
+    .tier-note { font-size: 0.85rem; color: rgba(15,23,42,0.55); line-height: 1.5; margin-top: 0.75rem; font-style: italic; }
     .tier-badge {
       display: inline-block;
       font-family: 'JetBrains Mono', monospace;
@@ -236,104 +264,105 @@
       border-radius: 4px;
       margin-bottom: 0.6rem;
     }
-    .tier-badge--popular {
-      background: rgba(50,43,221,0.1);
-      color: var(--brand-primary);
+    .tier-badge--popular { background: rgba(50,43,221,0.1);  color: var(--brand-primary); }
+    .tier-badge--max     { background: rgba(16,185,129,0.12); color: #059669; }
+    .tier-badge--entry   { background: rgba(15,23,42,0.07);   color: rgba(15,23,42,0.5); }
+    .tier-result {
+      margin-top: 1rem;
+      padding-top: 0.9rem;
+      border-top: 1px solid rgba(15,23,42,0.07);
     }
-    .tier-badge--max {
-      background: rgba(16,185,129,0.12);
-      color: #059669;
-    }
-
-    /* ── Scarcity ── */
-    .scarcity-row {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      margin: 1.25rem 0;
-    }
-    .scarcity-item {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
+    .tier-result-label {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.83rem;
-    }
-    .scarcity-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-    .scarcity-dot--open   { background: var(--hl-green); }
-    .scarcity-dot--limited { background: var(--hl-orange); }
-    .scarcity-dot--full   { background: var(--hl-rose); }
-
-    /* ── Stage blocks ── */
-    .stage-block {
-      border-left: 3px solid rgba(50,43,221,0.25);
-      padding: 1rem 1.5rem;
-      margin: 1rem 0;
-    }
-    .stage-block + .stage-block { margin-top: 1.25rem; }
-    .stage-number {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.7rem;
+      font-size: 0.65rem;
       font-weight: 700;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--brand-primary);
-      margin-bottom: 0.25rem;
+      color: var(--hl-green);
+      margin-bottom: 0.3rem;
     }
-    .stage-title {
-      font-family: 'Aptos', 'Calibri', 'Helvetica Neue', sans-serif;
-      font-weight: 700;
-      font-size: 1rem;
-      margin-bottom: 0.5rem;
-    }
+    .tier-result p { font-size: 0.88rem; color: rgba(15,23,42,0.7); margin: 0; }
 
-    /* ── Timeline ── */
-    .timeline {
+    /* Scarcity */
+    .scarcity-row { display: flex; flex-direction: column; gap: 0.5rem; margin: 1.25rem 0; }
+    .scarcity-item { display: flex; align-items: center; gap: 0.75rem; font-family: 'JetBrains Mono', monospace; font-size: 0.83rem; }
+    .scarcity-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+    .scarcity-dot--open    { background: var(--hl-green); }
+    .scarcity-dot--limited { background: var(--hl-orange); }
+    .scarcity-dot--full    { background: var(--hl-rose); }
+
+    /* Method flow */
+    .method-flow {
       position: relative;
       padding-left: 2rem;
-      margin: 1.25rem 0;
+      margin: 1.5rem 0;
     }
-    .timeline::before {
+    .method-flow::before {
       content: '';
       position: absolute;
-      left: 6px;
-      top: 4px;
-      bottom: 4px;
+      left: 6px; top: 4px; bottom: 4px;
       width: 2px;
-      background: rgba(50,43,221,0.18);
+      background: rgba(50,43,221,0.15);
     }
-    .timeline-item {
+    .method-step {
       position: relative;
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.5rem;
     }
-    .timeline-item::before {
+    .method-step:last-child { margin-bottom: 0; }
+    .method-step::before {
       content: '';
       position: absolute;
-      left: -1.625rem;
-      top: 6px;
-      width: 10px;
-      height: 10px;
+      left: -1.625rem; top: 5px;
+      width: 10px; height: 10px;
       border-radius: 50%;
       background: var(--brand-primary);
       border: 2px solid var(--brand-light);
       box-shadow: 0 0 0 2px var(--brand-primary);
     }
-    .timeline-marker {
+    .method-tag {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       font-weight: 700;
-      letter-spacing: 0.07em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--brand-primary);
-      margin-bottom: 0.2rem;
+      margin-bottom: 0.15rem;
+    }
+    .method-title {
+      font-family: 'Aptos', 'Calibri', 'Helvetica Neue', sans-serif;
+      font-weight: 700;
+      font-size: 0.97rem;
+      margin-bottom: 0.3rem;
+    }
+    .method-body { font-size: 0.9rem; color: rgba(15,23,42,0.75); line-height: 1.6; }
+    .method-body em { font-style: normal; color: var(--brand-dark); font-weight: 500; }
+
+    /* Outcome pillars */
+    .outcome-item {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(15,23,42,0.08);
+    }
+    .outcome-item:last-child { border-bottom: none; }
+    .outcome-quote {
+      font-family: 'Aptos', 'Calibri', 'Helvetica Neue', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--brand-dark);
+      margin-bottom: 0.3rem;
+    }
+    .outcome-detail { font-size: 0.875rem; color: rgba(15,23,42,0.65); line-height: 1.55; }
+    .outcome-icon {
+      font-size: 1.1rem;
+      margin-top: 2px;
+      flex-shrink: 0;
+      width: 28px;
+      text-align: center;
     }
 
-    /* ── Guarantee ── */
+    /* Guarantee */
     .guarantee-block {
       background: rgba(50,43,221,0.05);
       border: 1.5px solid rgba(50,43,221,0.2);
@@ -349,7 +378,7 @@
       color: var(--brand-primary);
     }
 
-    /* ── CTA ── */
+    /* CTA */
     .cta-section {
       background: var(--brand-dark);
       border-radius: 12px;
@@ -357,151 +386,167 @@
       text-align: center;
       margin-top: 2.5rem;
     }
-    .cta-section h2 {
-      color: #fff;
-      margin-top: 0;
-      margin-bottom: 0.75rem;
-    }
-    .cta-section p {
-      color: rgba(255,255,255,0.7);
+    .cta-section h2 { color: #fff; margin-top: 0; margin-bottom: 0.5rem; }
+    .cta-section p  { color: rgba(255,255,255,0.7); margin-bottom: 1.5rem; font-size: 0.97rem; }
+    .cta-avail {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--hl-orange);
       margin-bottom: 1.5rem;
-      font-size: 0.97rem;
+      letter-spacing: 0.03em;
     }
     .cta-steps {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      text-align: left;
-      margin-bottom: 1.75rem;
-      max-width: 420px;
-      margin-left: auto;
-      margin-right: auto;
+      display: flex; flex-direction: column; gap: 0.5rem;
+      text-align: left; margin-bottom: 1.75rem;
+      max-width: 420px; margin-left: auto; margin-right: auto;
     }
-    .cta-step {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-      color: rgba(255,255,255,0.8);
-      font-size: 0.92rem;
-    }
+    .cta-step { display: flex; align-items: flex-start; gap: 0.75rem; color: rgba(255,255,255,0.8); font-size: 0.92rem; }
     .cta-step-num {
       font-family: 'JetBrains Mono', monospace;
-      font-weight: 700;
-      font-size: 0.75rem;
-      background: var(--brand-primary);
-      color: #fff;
-      width: 22px;
-      height: 22px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      margin-top: 1px;
+      font-weight: 700; font-size: 0.75rem;
+      background: var(--brand-primary); color: #fff;
+      width: 22px; height: 22px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; margin-top: 1px;
     }
     .btn-cta {
       display: inline-block;
-      background: var(--brand-primary);
-      color: #fff;
+      background: var(--brand-primary); color: #fff;
       font-family: 'JetBrains Mono', monospace;
-      font-weight: 700;
-      font-size: 0.825rem;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      padding: 0.875rem 2rem;
-      border-radius: 7px;
-      text-decoration: none;
-      border: none;
-      cursor: pointer;
+      font-weight: 700; font-size: 0.825rem;
+      text-transform: uppercase; letter-spacing: 0.06em;
+      padding: 0.875rem 2rem; border-radius: 7px;
+      text-decoration: none; border: none; cursor: pointer;
       transition: opacity 0.15s ease;
     }
     .btn-cta:hover { opacity: 0.88; text-decoration: none; }
-    .urgency-line {
-      font-size: 0.82rem;
-      color: rgba(255,255,255,0.45);
-      margin-top: 0.75rem;
-      font-family: 'JetBrains Mono', monospace;
-    }
+    .urgency-line { font-size: 0.82rem; color: rgba(255,255,255,0.45); margin-top: 0.75rem; font-family: 'JetBrains Mono', monospace; }
 
-    /* ── Pillar list ── */
-    .pillar {
-      margin-bottom: 1.5rem;
-    }
-    .pillar-title {
-      font-family: 'Aptos', 'Calibri', 'Helvetica Neue', sans-serif;
-      font-weight: 700;
-      font-size: 1rem;
-      color: var(--brand-dark);
-      margin-bottom: 0.4rem;
-    }
-    ul.pillar-bullets {
-      list-style: none;
-      padding: 0;
-    }
-    ul.pillar-bullets li {
-      padding: 0.3rem 0 0.3rem 1.4rem;
-      position: relative;
-      font-size: 0.92rem;
-      color: rgba(15,23,42,0.8);
-    }
-    ul.pillar-bullets li::before {
-      content: "—";
-      position: absolute;
-      left: 0;
-      color: var(--brand-primary);
-    }
-
-    /* ── Sharp closer ── */
-    .sharp-closer {
-      font-size: 1.2rem;
-      font-weight: 600;
-      line-height: 1.45;
-      border-top: 2px solid var(--brand-primary);
-      border-bottom: 2px solid var(--brand-primary);
-      padding: 1.25rem 0;
-      margin: 2rem 0;
-      color: var(--brand-dark);
-    }
-
-    /* ── Footer ── */
+    /* Footer */
     .page-footer {
-      text-align: center;
-      padding: 2rem 1.5rem;
-      font-size: 0.8rem;
-      color: rgba(15,23,42,0.4);
-      font-family: 'Inter', sans-serif;
+      text-align: center; padding: 2rem 1.5rem;
+      font-size: 0.8rem; color: rgba(15,23,42,0.4);
     }
 
-    /* ── Responsive ── */
+    /* Pull-quote testimonials (participants) */
+    .pquote-grid { display: grid; gap: 0; margin: 1.5rem 0; }
+    .pquote-item {
+      padding: 1.25rem 0;
+      border-bottom: 1px solid rgba(15,23,42,0.08);
+      position: relative;
+    }
+    .pquote-item:last-child { border-bottom: none; }
+    .pquote-mark {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 3.5rem;
+      line-height: 1;
+      color: var(--hl-orange);
+      opacity: 0.35;
+      margin-bottom: -0.75rem;
+      display: block;
+    }
+    .pquote-text {
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: var(--brand-dark);
+      font-style: italic;
+      margin-bottom: 0.6rem;
+    }
+    .pquote-author {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--hl-orange);
+      opacity: 0.7;
+    }
+
+    /* Editorial partner quotes */
+    .partner-quotes { margin: 1.5rem 0; }
+    .partner-quote-item {
+      padding: 1.5rem 0;
+      border-bottom: 1px solid rgba(15,23,42,0.07);
+    }
+    .partner-quote-item:last-child { border-bottom: none; }
+    .partner-quote-text {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--brand-dark);
+      font-style: italic;
+      margin-bottom: 0.5rem;
+      padding-left: 1.25rem;
+      border-left: 2px solid var(--brand-primary);
+    }
+    .partner-quote-attr {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(15,23,42,0.4);
+      padding-left: 1.25rem;
+    }
+
+    /* Compact session spine */
+    .session-spine {
+      background: rgba(50,43,221,0.04);
+      border: 1px solid rgba(50,43,221,0.12);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin: 0.4rem 0 0.2rem;
+    }
+    .spine-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      padding: 0.3rem 0;
+      font-size: 0.88rem;
+      color: rgba(15,23,42,0.75);
+      border-bottom: 1px solid rgba(50,43,221,0.07);
+    }
+    .spine-row:last-child { border-bottom: none; }
+    .spine-time {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: var(--brand-primary);
+      white-space: nowrap;
+      padding-top: 2px;
+      min-width: 90px;
+    }
+
     @media (min-width: 620px) {
       h1 { font-size: 3rem; }
       .scarcity-row { flex-direction: row; flex-wrap: wrap; gap: 0.75rem 1.5rem; }
+      .stats-bar { grid-template-columns: repeat(4, 1fr); }
+      .pquote-grid { grid-template-columns: 1fr 1fr; gap: 0 1.5rem; }
+      .pquote-item:nth-child(3) { grid-column: 1 / -1; border-bottom: none; border-top: 1px solid rgba(15,23,42,0.08); }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
   <header class="site-header">
-    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgMjAwIiB3aWR0aD0iMjQwIiBoZWlnaHQ9IjE1MCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImNhcmRHcmFkIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6I2RkZTRmNTtzdG9wLW9wYWNpdHk6MSIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSI1NSUiIHN0eWxlPSJzdG9wLWNvbG9yOiM2YjZmYzQ7c3RvcC1vcGFjaXR5OjEiIC8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6IzFhMWE2ZTtzdG9wLW9wYWNpdHk6MSIgLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDwhLS0gVGlsdGVkIGNhcmQgLS0+CiAgPHJlY3QgeD0iMjAiIHk9IjIwIiB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgcng9IjI2IiByeT0iMjYiCiAgICAgICAgZmlsbD0idXJsKCNjYXJkR3JhZCkiCiAgICAgICAgdHJhbnNmb3JtPSJyb3RhdGUoLTE4LCA5MCwgOTApIiAvPgogIDwhLS0gVGV4dCAtLT4KICA8dGV4dCB4PSIxMDgiIHk9Ijk1IgogICAgICAgIGZvbnQtZmFtaWx5PSInQXB0b3MnLCAnQ2FsaWJyaScsICdIZWx2ZXRpY2EgTmV1ZScsIEFyaWFsLCBzYW5zLXNlcmlmIgogICAgICAgIGZvbnQtd2VpZ2h0PSI4MDAiCiAgICAgICAgZm9udC1zaXplPSI1NCIKICAgICAgICBmaWxsPSIjMzIyQkREIgogICAgICAgIGxldHRlci1zcGFjaW5nPSItMSI+VmluY2VudDwvdGV4dD4KICA8dGV4dCB4PSIxMDgiIHk9IjE1OCIKICAgICAgICBmb250LWZhbWlseT0iJ0FwdG9zJywgJ0NhbGlicmknLCAnSGVsdmV0aWNhIE5ldWUnLCBBcmlhbCwgc2Fucy1zZXJpZiIKICAgICAgICBmb250LXdlaWdodD0iODAwIgogICAgICAgIGZvbnQtc2l6ZT0iNTQiCiAgICAgICAgZmlsbD0iIzMyMkJERCIKICAgICAgICBsZXR0ZXItc3BhY2luZz0iLTEiPkNsYWV5czwvdGV4dD4KPC9zdmc+" alt="Vincent Claeys" style="height: 56px; display: block;" />
+    <div class="logo-placeholder">[Logo · insert manually]</div>
   </header>
 
   <div class="page-wrap">
 
-    <!-- ── ELEMENT 1: TITLE ── -->
+    <!-- TITLE -->
     <div style="margin-top: 3rem; margin-bottom: 0.5rem;">
       <div class="section-label">The Workshop</div>
     </div>
     <h1>Copilot.<br>Actually Used.</h1>
 
-    <!-- ── ELEMENT 2: SUBHEADLINE ── -->
+    <!-- SUBHEADLINE -->
     <p class="subheadline">
-      For IT leaders and digital transformation managers who are done watching expensive Copilot licenses sit untouched, and for the teams who deserved better training the first time around.
+      For IT leaders and digital transformation managers who are done watching expensive Copilot licenses sit untouched while their employees stay on ChatGPT.
     </p>
 
     <hr class="accent-rule accent-rule--strong">
 
-    <!-- ── ELEMENT 3: OPENING HOOK ── -->
+    <!-- HOOK -->
     <div class="hook-block">
       <p>
         The rollout went fine. IT handled it. Licenses are live.<br>
@@ -513,380 +558,363 @@
         Still doing in two hours what Copilot could do in six minutes.
       </p>
       <p>
-        You didn't say anything. But you thought it: <em>"We spent €300 per person per year on this. And nobody's using it."</em>
+        You didn't say anything. But you thought it: <em>"We spent &euro;300 per person per year on this. And nobody's using it."</em>
       </p>
       <p>
         Now it's coming up in the quarterly review. The CFO wants to talk ROI. And you don't have numbers yet.
       </p>
     </div>
 
-    <!-- ── ELEMENT 4: PROBLEM REFRAME ── -->
+    <!-- PROBLEM REFRAME -->
     <div class="section-label" style="margin-top: 2rem;">What you've already tried</div>
     <h2>The fix isn't more training. It's different training.</h2>
     <p>
-      You've probably already tried Microsoft's own materials. Generic slides. Feature walkthroughs.
-      "Imagine all the time you'll save." Then it's over, employees go back to their desks, and nothing changes.
+      You've probably already tried Microsoft's own materials. Generic slides. Feature walkthroughs. "Imagine all the time you'll save." Then it's over, employees go back to their desks, and nothing changes.
     </p>
     <p>
       Maybe you sent articles. Maybe you gave people access to the learning portal. Maybe you hoped someone would become a Copilot champion and drag the rest along.
     </p>
     <p>
       None of that works because it misses the real blocker. Your team isn't lazy. They tried Copilot once, got a garbage output, and wrote it off.
-      They don't need motivation. They need someone to show them exactly how to prompt for their specific job, with live examples that work, in a room where they can ask the questions they were too embarrassed to ask Microsoft.
+      They need someone to show them exactly how to prompt for their specific job, live, in the tool, with use cases they actually recognise.
     </p>
 
-    <!-- ── COPILOT TIERS CONTEXT ── -->
-    <div class="section-label" style="margin-top: 2rem;">What Copilot are we talking about</div>
-    <h2>Three levels. Most companies are stuck on level one.</h2>
+    <!-- WHO IT'S FOR -->
+    <div class="section-label" style="margin-top: 2rem;">Is this for you?</div>
+    <h2>Who books this</h2>
     <p>
-      Not everyone means the same thing when they say "Copilot." There are three distinct versions. Each has very different capabilities.
+      IT leaders and digital transformation managers inside companies of 100 to 5,000 people. You bought Microsoft 365 Copilot licenses. Adoption never took off the way it should have. Now someone is asking what the investment actually produced.
     </p>
-
-    <div style="display: grid; gap: 0.75rem; margin: 1.25rem 0;">
-
-      <div style="display: flex; gap: 1rem; align-items: flex-start; padding: 1rem; border: 1.5px solid rgba(15,23,42,0.1); border-radius: 8px; background: #fff;">
-        <div style="font-family: &#39;JetBrains Mono&#39;, monospace; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; background: rgba(15,23,42,0.07); color: var(--brand-dark); padding: 0.25rem 0.5rem; border-radius: 4px; white-space: nowrap; margin-top: 2px;">Free</div>
-        <div>
-          <div style="font-family: &#39;Aptos&#39;, &#39;Calibri&#39;, sans-serif; font-weight: 700; font-size: 0.95rem; margin-bottom: 0.2rem;">Copilot Chat</div>
-          <div style="font-size: 0.875rem; color: rgba(15,23,42,0.65);">The free version. Browser-based. No connection to your Microsoft 365 data. Useful for standalone tasks. Not for working with company emails, documents, or meetings.</div>
-        </div>
-      </div>
-
-      <div style="display: flex; gap: 1rem; align-items: flex-start; padding: 1rem; border: 2px solid var(--brand-primary); border-radius: 8px; background: rgba(50,43,221,0.03);">
-        <div style="font-family: &#39;JetBrains Mono&#39;, monospace; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; background: rgba(50,43,221,0.12); color: var(--brand-primary); padding: 0.25rem 0.5rem; border-radius: 4px; white-space: nowrap; margin-top: 2px;">Licensed</div>
-        <div>
-          <div style="font-family: &#39;Aptos&#39;, &#39;Calibri&#39;, sans-serif; font-weight: 700; font-size: 0.95rem; margin-bottom: 0.2rem;">Microsoft 365 Copilot</div>
-          <div style="font-size: 0.875rem; color: rgba(15,23,42,0.65);">The one you've paid for. Integrated inside Teams, Outlook, Word, Excel, and PowerPoint. Reads your company data: emails, documents, meeting transcripts. This is the focus of every workshop.</div>
-        </div>
-      </div>
-
-      <div style="display: flex; gap: 1rem; align-items: flex-start; padding: 1rem; border: 1.5px solid rgba(15,23,42,0.1); border-radius: 8px; background: #fff;">
-        <div style="font-family: &#39;JetBrains Mono&#39;, monospace; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; background: rgba(16,185,129,0.12); color: #059669; padding: 0.25rem 0.5rem; border-radius: 4px; white-space: nowrap; margin-top: 2px;">Advanced</div>
-        <div>
-          <div style="font-family: &#39;Aptos&#39;, &#39;Calibri&#39;, sans-serif; font-weight: 700; font-size: 0.95rem; margin-bottom: 0.2rem;">Copilot Agents</div>
-          <div style="font-size: 0.875rem; color: rgba(15,23,42,0.65);">Multi-step workflows that run automatically across tools. Powerful, but most teams aren't there yet, and they don't need to be. I show what agents look like and when they make sense. The rule: if a good prompt solves it, we use the prompt. Agents come later.</div>
-        </div>
-      </div>
-
-    </div>
-
-    <p style="font-size: 0.9rem; color: rgba(15,23,42,0.6);">
-      Most employees who tried Copilot and gave up were using the free chat version, or using the licensed version like the free one. The workshop fixes that distinction immediately.
-    </p>
-
-    <!-- ── ELEMENT 5: WHAT THIS IS NOT ── -->
-    <div class="callout callout--rose" style="margin-top: 1.75rem;">
-      This is not a Microsoft feature tour. I don't use their slides.<br>
-      This is not another "intro to AI" session. Your team has already forgotten three of those.
-    </div>
-
-    <!-- ── ELEMENT 6: SHARP CLOSER ── -->
-    <p class="sharp-closer">
-      Your employees aren't the problem. The training they got was.
-    </p>
-
-    <!-- ── ELEMENT 7: WHO THIS IS FOR ── -->
-    <div class="section-label">Self-selection</div>
-    <h2>Who this is for</h2>
-    <p>
-      This workshop is commissioned by IT leaders and digital transformation managers inside companies of 100 to 5,000 people. The session itself is for their teams: accounting, HR, logistics, marketing, operations, anyone who holds a Copilot license and hasn't found a real reason to use it yet.
-    </p>
-    <p>As the person booking it, it's for you if:</p>
 
     <ul class="signal-list">
-      <li>You bought Copilot licenses and watched the adoption numbers flatline after week two</li>
-      <li>You know the tool can save time, but you can't explain how it applies to accounting, or logistics, or HR. Nobody gave you department-specific examples</li>
-      <li>You've done at least one "awareness session" that nobody remembered by Friday</li>
-      <li>You're dreading the CFO asking what the licenses are actually doing for productivity</li>
-      <li>Your employees tried Copilot, got a bad output, and decided it wasn't for them. And you haven't found a way to change that yet</li>
-      <li>You want something your team can use on Monday morning, not a recording they'll never rewatch</li>
-      <li>You'd rather someone show real failures alongside real wins than pretend the tool is perfect</li>
+      <li>You bought licenses and watched adoption flatline after week two</li>
+      <li>You can't explain to a finance or HR manager how Copilot applies to their actual job, because nobody showed you the department-specific examples</li>
+      <li>You've run at least one awareness session that nobody remembered by Friday</li>
+      <li>The CFO is asking what the licenses are actually doing for productivity, and you don't have a clean answer yet</li>
+      <li>Your team tried Copilot, got a bad output, and decided it wasn't for them, and nothing has changed that so far</li>
+      <li>You want something the team can use on Monday, not a recording they'll never rewatch</li>
+      <li>You'd rather someone show honest results, including failures, than pretend the tool is perfect</li>
     </ul>
 
-    <div class="callout callout--blue">
-      If that's you, keep reading.
-    </div>
+    <div class="callout callout--blue">If that's you, keep reading.</div>
 
-    <!-- ── ELEMENT 8: WHAT THIS HELPS YOU ACHIEVE ── -->
-    <div class="section-label" style="margin-top: 2.5rem;">The outcome</div>
-    <h2>Before and after one session</h2>
-    <p>
-      Right now, your team knows Copilot exists. After one session, they know how to use it for their specific job, with prompts built for their context, demonstrated live, in the tool they already have.
-    </p>
-    <p>The three things that change:</p>
+    <!-- PARTICIPANT TESTIMONIALS -->
+    <div class="section-label" style="margin-top: 2.5rem;">What participants say</div>
+    <h2>From people who were in the room</h2>
 
-    <div class="pillar">
-      <div class="pillar-title">1. Confidence with the prompt</div>
-      <ul class="pillar-bullets">
-        <li>They leave with a prompt formula that works for their role. Not a generic one.</li>
-        <li>They've seen the tool fail and recovered. That removes the fear of trying</li>
-        <li>They know exactly which tasks are worth prompting for, and which aren't</li>
-      </ul>
-    </div>
-    <div class="pillar">
-      <div class="pillar-title">2. Resources they'll actually use</div>
-      <ul class="pillar-bullets">
-        <li>Copy-paste prompt sheets built for their department during the session, ready by Monday</li>
-        <li>No recording to rewatch. No slide deck to dig out. What they need is already in their hands.</li>
-        <li>Something they can share with a colleague who wasn't in the room, without needing to explain it first</li>
-      </ul>
-    </div>
-    <div class="pillar">
-      <div class="pillar-title">3. A number for the CFO</div>
-      <ul class="pillar-bullets">
-        <li>Post-session confidence scores you can cite in your next review</li>
-        <li>A clear "before and after" you can show to whoever approved the budget</li>
-        <li>Teams that are visibly using the tool, not quietly ignoring it</li>
-      </ul>
-    </div>
-
-    <p style="margin-top: 1rem;">
-      Your employees will show up skeptical. The people who'll notice the change are the ones they report to.
-    </p>
-
-    <!-- ── ELEMENT 9: THE 3 CORE COMPONENTS ── -->
-    <div class="section-label" style="margin-top: 2.5rem;">The method</div>
-    <h2>Three things every session includes</h2>
-
-    <div class="pillar">
-      <div class="pillar-title">Diagnose: before you're in the room</div>
-      <ul class="pillar-bullets">
-        <li>Pre-workshop intake: your industry, your teams, their actual day-to-day workflows</li>
-        <li>The canonical use cases get replaced with ones your team will actually recognise</li>
-        <li>Governance and data safety covered first, so the IT side of the room relaxes</li>
-      </ul>
-    </div>
-    <div class="pillar">
-      <div class="pillar-title">Demonstrate: live, in the tool, including what fails</div>
-      <ul class="pillar-bullets">
-        <li>The GCSE prompt framework (Goal, Context, Source, Expectation) taught as a reusable skill, not a tip list</li>
-        <li>Three real use cases, built around your team's workflows, not a generic webinar script</li>
-        <li>At least one demo that fails, with a live walkthrough of why and how to fix it</li>
-      </ul>
-    </div>
-    <div class="pillar">
-      <div class="pillar-title">Deploy: the resources they take home</div>
-      <ul class="pillar-bullets">
-        <li>Prompt sheets built live during the session, documented and formatted. Copy-paste ready on Monday.</li>
-        <li>A clear "start small, expand gradually" adoption plan they can follow next week</li>
-        <li>Agent instruction examples (Tier 2 and above), showing how to move beyond basic prompting when the team is ready</li>
-      </ul>
-    </div>
-
-    <!-- ── ELEMENT 10: THE 3 TRANSFORMATION STAGES ── -->
-    <div class="section-label" style="margin-top: 2.5rem;">What changes and when</div>
-    <h2>Three stages, one session</h2>
-
-    <div class="stage-block">
-      <div class="stage-number">Stage 1</div>
-      <div class="stage-title">Permission to experiment</div>
-      <p>
-        The first fifteen minutes kill the fear. Copilot is inside Microsoft 365. Your data doesn't go anywhere. You're not doing anything reckless.
-        The room stops treating it like a liability and starts treating it like a tool. People go from crossed arms to leaning forward.
-        You can feel the shift. It usually happens around minute twelve.
-      </p>
-    </div>
-
-    <div class="stage-block">
-      <div class="stage-number">Stage 2</div>
-      <div class="stage-title">The first real output</div>
-      <p>
-        I build a prompt live for a use case they actually deal with. Not a generic demo. Their job, their data, their workflow.
-        I run it. We look at the output together. Then I build a second version to show what changes when one ingredient changes.
-        The room stops being passive. Someone points at the screen: "Can you do that for my department?"
-        That's the moment. The one that doesn't happen in any Microsoft webinar.
-      </p>
-    </div>
-
-    <div class="stage-block">
-      <div class="stage-number">Stage 3</div>
-      <div class="stage-title">Monday morning capability</div>
-      <p>
-        The session ends with something tangible: prompt sheets built for their department, a clear picture of what to try first, and no unanswered questions.
-        They watched it work. They understand why it works. They know exactly what to type when they sit down Monday morning.
-        Three weeks later, the ones who started using it are already showing others.
-        That's how adoption actually spreads.
-      </p>
-    </div>
-
-    <!-- ── ELEMENT 11: TIMELINE ── -->
-    <div class="section-label" style="margin-top: 2.5rem;">What to expect</div>
-    <h2>What happens and when</h2>
-
-    <p>
-      This isn't a multi-week program. One session does the heavy lifting. Here's what the arc looks like:
-    </p>
-
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-marker">Before the session (Tier 2 &amp; 3)</div>
-        <p>A short intake form lands in your inbox. Industry, team, top three pain points. Takes ten minutes. That's what I use to build the cases. Generic sessions skip this. These don't.</p>
+    <div class="pquote-grid">
+      <div class="pquote-item">
+        <span class="pquote-mark">"</span>
+        <p class="pquote-text">I learned how much it can simplify my daily tasks and help me save time. I'm grateful for the clear explanations and for discovering how Copilot can support me in working smarter, not harder.</p>
+        <div class="pquote-author">Workshop participant</div>
       </div>
-      <div class="timeline-item">
-        <div class="timeline-marker">The session (all tiers)</div>
-        <p>90 minutes online. Safety and governance first. Then the GCSE prompt framework. Then three live cases built for your context. I demonstrate in the tool, in real time, including what fails. Adoption close to finish.</p>
+      <div class="pquote-item">
+        <span class="pquote-mark">"</span>
+        <p class="pquote-text">Vincent was amazing and explained everything very well and gave us many examples.</p>
+        <div class="pquote-author">Workshop participant</div>
       </div>
-      <div class="timeline-item">
-        <div class="timeline-marker">Within 48 hours (Tier 2 &amp; 3)</div>
-        <p>The full prompt doc lands in your inbox. Every prompt used during the session, formatted and reusable. No need to rewatch anything. Forward it to the team and it works on its own.</p>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-marker">Days 1–7 after the session (Tier 3 only)</div>
-        <p>Seven short prompt assignments, one per day, tied to your team's real work. Not homework. A nudge. Each one takes under five minutes and reinforces something from the session before people forget it.</p>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-marker">Week 3 (Tier 3 only)</div>
-        <p>A 60-minute Office Hours session. This is where adoption either sticks or quietly dies. Bring the blockers, the weird outputs, the "it didn't work for this one." I clear them live. After the call, I send a one-page recap: what came up, what it tells us, what to try next.</p>
+      <div class="pquote-item">
+        <span class="pquote-mark">"</span>
+        <p class="pquote-text">I can advance in using Copilot in my work without being concerned that my sensitive data might leak.</p>
+        <div class="pquote-author">Workshop participant</div>
       </div>
     </div>
 
-    <!-- ── ELEMENT 12: TIERED OFFER STRUCTURE ── -->
-    <div class="section-label" style="margin-top: 2.5rem;">Choose your format</div>
-    <h2>Three options, one decision</h2>
+    <!-- STATS BAR -->
+    <div class="stats-bar" style="margin-top: 1.5rem;">
+      <div class="stat-item">
+        <div class="stat-number">4.63<span style="font-size:1rem;">/5</span></div>
+        <div class="stat-label">Average overall rating across 59 participants</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">92%</div>
+        <div class="stat-label">Rate the session 4 or 5 stars</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">4.25<span style="font-size:1rem;">/5</span></div>
+        <div class="stat-label">Average confidence with Copilot after the session</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">8/8</div>
+        <div class="stat-label">Partners willing to recommend working with me</div>
+      </div>
+    </div>
+
+    <!-- OUTCOMES -->
+    <div class="section-label" style="margin-top: 2.5rem;">What changes</div>
+    <h2>What you can say after one session</h2>
+
+    <div style="margin: 1.25rem 0;">
+      <div class="outcome-item">
+        <div class="outcome-icon">&#x1F4AC;</div>
+        <div>
+          <div class="outcome-quote">"My team writes prompts that actually work."</div>
+          <div class="outcome-detail">They leave with the GCSE prompt framework, a reusable structure for any task, not a list of copy-paste tricks. They've seen it work live, for their job. That's what makes it stick.</div>
+        </div>
+      </div>
+      <div class="outcome-item">
+        <div class="outcome-icon">&#x1F4C4;</div>
+        <div>
+          <div class="outcome-quote">"I have material I can send to any department on Monday."</div>
+          <div class="outcome-detail">A full prompt doc, every prompt built during the session, formatted and ready to use, lands in your inbox within 48 hours. No recording to rewatch. No slides to dig out.</div>
+        </div>
+      </div>
+      <div class="outcome-item">
+        <div class="outcome-icon">&#x1F4A1;</div>
+        <div>
+          <div class="outcome-quote">"I know how the tool works in my day-to-day."</div>
+          <div class="outcome-detail">They stop being passive users. They know which tasks Copilot is good at, which ones it fails at, and why. That practical awareness is what keeps them opening the tool on Tuesday, not just on Monday after a training.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- METHOD FLOW -->
+    <div class="section-label" style="margin-top: 2.5rem;">How it works</div>
+    <h2>From first call to lasting habit</h2>
+    <p>Every engagement follows the same structure. What changes across the three tiers is how much of it you get.</p>
+
+    <div class="method-flow">
+      <div class="method-step">
+        <div class="method-tag">Before · Tier 2 &amp; 3</div>
+        <div class="method-title">Intake: I research your context</div>
+        <div class="method-body">A short form. Industry, team, top three pain points. Ten minutes on your side. I use it to replace the generic demos with scenarios your team will recognise. <em>This is what most trainers skip.</em></div>
+      </div>
+
+      <div class="method-step">
+        <div class="method-tag">Session 1 · All tiers · 90 min</div>
+        <div class="method-title">The core workshop</div>
+        <div class="session-spine">
+          <div class="spine-row">
+            <span class="spine-time">0 – 15 min</span>
+            <span>Safety &amp; governance. Your data stays in your tenant. The skeptics relax.</span>
+          </div>
+          <div class="spine-row">
+            <span class="spine-time">15 – 30 min</span>
+            <span>GCSE prompt framework taught as a reusable skill. I show a bad prompt, fix it live, show what changes.</span>
+          </div>
+          <div class="spine-row">
+            <span class="spine-time">30 – 75 min</span>
+            <span>Three live use cases: Outlook, Word (meeting transcripts), Excel. Real tasks, real failures, real fixes.</span>
+          </div>
+          <div class="spine-row">
+            <span class="spine-time">75 – 90 min</span>
+            <span>Adoption close. One task, one win, one thing to try Monday. No homework. No recordings to watch.</span>
+          </div>
+        </div>
+        <div class="method-body" style="margin-top: 0.5rem;">Prompt doc in your inbox within 48 hours (Tier 2 &amp; 3).</div>
+      </div>
+
+      <div class="method-step">
+        <div class="method-tag">Week 3 · Tier 2 &amp; 3</div>
+        <div class="method-title">Session 2: specific scenarios and real blockers</div>
+        <div class="method-body">90 minutes back with the same team. Now they've tried it. Now they have real questions. We work through specific scenarios for their role, clear the blockers, and go deeper on the use cases that matter most to them. <em>This is where the framework becomes a habit.</em></div>
+      </div>
+
+      <div class="method-step">
+        <div class="method-tag">After Session 2 · Tier 3 only</div>
+        <div class="method-title">7-day challenge, then a prompt-a-thon</div>
+        <div class="method-body">Daily prompt nudges for seven days keep the momentum going. Three weeks later, a live prompt-a-thon session: the whole team works through real tasks together, side by side, with me in the room. That's the point where casual users become consistent ones. All recordings and materials sit in a centralised hub they can access any time.</div>
+      </div>
+    </div>
+
+    <!-- PARTNER TESTIMONIALS -->
+    <div class="section-label" style="margin-top: 2.5rem;">What partners say</div>
+    <h2>From the people who send me into their client accounts</h2>
+
+    <div class="partner-quotes">
+      <div class="partner-quote-item">
+        <p class="partner-quote-text">I have complete confidence sending you into customer conversations, even without me present. I am certain they will feel that the time spent with you genuinely helped them gain back time and clarity that will bring them real value.</p>
+        <div class="partner-quote-attr">Liliana Dumitrache · Account Manager, Crayon</div>
+      </div>
+      <div class="partner-quote-item">
+        <p class="partner-quote-text">You prepare well and adapt fast to customer-specific requirements, even when they are unpredictable. You are sincere with customers without overselling abstract notions.</p>
+        <div class="partner-quote-attr">Karina Cireap · Account Executive, Crayon</div>
+      </div>
+      <div class="partner-quote-item">
+        <p class="partner-quote-text">His ability to structure content clearly and share relevant use cases that resonate with the audience. His adaptability across different topics makes the sessions more dynamic and impactful.</p>
+        <div class="partner-quote-attr">Daniela Scarlat · Sales Director, Crayon</div>
+      </div>
+      <div class="partner-quote-item">
+        <p class="partner-quote-text">The attitude and the storytelling catches people's attention. You make the workshop interactive, so people don't get bored. They're not there only to listen. You make people feel you are approachable and open for discussion.</p>
+        <div class="partner-quote-attr">Ruxandra Stoian · Account Executive, Crayon</div>
+      </div>
+      <div class="partner-quote-item">
+        <p class="partner-quote-text">Insightful, a lot of useful things, engaging, inspiring.</p>
+        <div class="partner-quote-attr">Daria Gotgelf · CEE Marketing Coordinator, Crayon (quoting customer feedback)</div>
+      </div>
+    </div>
+
+    <div class="testimonial-logo-row">
+      <span style="font-size:0.75rem; color: rgba(15,23,42,0.35); font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.06em;">Partners:</span>
+      <div class="logo-slot">[Crayon logo]</div>
+      <div class="logo-slot">[Partner logo]</div>
+      <div class="logo-slot">[Partner logo]</div>
+    </div>
+
+    <!-- TIERS -->
+    <div class="section-label" style="margin-top: 2.5rem;">How we work together</div>
+    <h2>One transformation. Three levels of support.</h2>
+    <p>The goal is the same in every tier: your team uses Copilot as a daily habit, not a forgotten experiment. What changes is how much I'm in it with you.</p>
 
     <div class="tier-grid">
 
       <!-- Tier 1 -->
       <div class="tier-card">
+        <div class="tier-badge tier-badge--entry">Self-contained</div>
         <div class="tier-name">Workshop Only</div>
-        <div class="tier-tagline">The basics, nothing more</div>
-        <div class="tier-price">€950</div>
+        <div class="tier-tagline">A one-to-many inspiration session. Works well for partner-led webinars and large internal kickoffs.</div>
+        <div class="tier-price">&euro;1,750</div>
         <ul class="tier-includes">
           <li>90-minute live session (online)</li>
-          <li>Safety &amp; governance intro</li>
-          <li>GCSE prompt framework, taught as a reusable skill, not a tip list</li>
-          <li>2–3 standard use cases (not tailored to your industry)</li>
-          <li>Basic prompt recap shared after the session</li>
+          <li>Safety &amp; governance: the questions your team is already asking</li>
+          <li>GCSE prompt framework taught as a reusable skill, not a cheat sheet</li>
+          <li>2-3 proven use cases (solid, not tailored to your industry)</li>
+          <li>Basic prompt recap after the session</li>
         </ul>
+        <div class="tier-result">
+          <div class="tier-result-label">What changes</div>
+          <p>Your team stops guessing and starts prompting. They leave with a framework they can apply immediately, without needing me in the room again. You leave knowing exactly what tailored support would add.</p>
+        </div>
         <p class="tier-note">
-          No intake. No tailoring. No prompt doc. This exists for organisations that want an honest introduction before committing further, or that need to run the numbers past someone first. If you're not sure, this is the low-risk entry point.
+          The content isn't built around your specific industry or workflows. That's the trade-off at this level. It's the right choice if you're testing the format before a larger rollout or need one clear internal win first.
         </p>
       </div>
 
       <!-- Tier 2 -->
       <div class="tier-card tier-card--featured">
-        <div class="tier-badge tier-badge--popular">Standard</div>
+        <div class="tier-badge tier-badge--popular">Built for you</div>
         <div class="tier-name">Tailored Workshop</div>
-        <div class="tier-tagline">The session built for your team, not a template</div>
-        <div class="tier-price">€1,250</div>
+        <div class="tier-tagline">I research your context. Your team gets demos they recognise.</div>
+        <div class="tier-price">&euro;4,750</div>
         <ul class="tier-includes">
-          <li>Short intake form before the session: industry, team context, top three pain points</li>
-          <li>Three practical use cases built around your actual workflows, not generic demos</li>
-          <li>90-minute live session (online), full workshop spine, all five phases</li>
-          <li>Full prompt doc delivered within 48 hours. Every prompt used, formatted and reusable.</li>
+          <li>Intake form: industry, team context, top three pain points</li>
+          <li>Session 1: 90-minute live introduction with tailored demos built around your team's actual work</li>
+          <li>Session 2 (3 weeks later): 90-minute follow-up with specific scenarios, deeper Q&amp;A, and live problem-solving on real blockers</li>
+          <li>Full prompt doc delivered after Session 1</li>
           <li>Safety, governance, and adoption close included</li>
         </ul>
+        <div class="tier-result">
+          <div class="tier-result-label">What changes</div>
+          <p>A team that recognised their own work in the demo. A prompt doc they actually open on Monday. Two sessions means the learning doesn't die in week one. The follow-up is where it becomes a habit.</p>
+        </div>
         <p class="tier-note">
-          This is the right default for most teams. The intake takes ten minutes on your side. The tailoring is what makes the difference between a session people remember and one they forget by Thursday.
+          The intake takes ten minutes on your side. That ten minutes is what makes the difference between a session people talk about and one they forget.
         </p>
       </div>
 
       <!-- Tier 3 -->
       <div class="tier-card">
-        <div class="tier-badge tier-badge--max">Full track</div>
+        <div class="tier-badge tier-badge--max">Guided adoption</div>
         <div class="tier-name">Workshop + Activation Track</div>
-        <div class="tier-tagline">For teams where adoption needs to stick past day one</div>
-        <div class="tier-price">€2,250</div>
+        <div class="tier-tagline">I stay in the game until adoption actually holds.</div>
+        <div class="tier-price">&euro;10,350</div>
         <ul class="tier-includes">
-          <li>Everything in the Tailored Workshop</li>
-          <li>7-day activation challenge: one short prompt assignment per day, tied to real work. Keeps the session alive before people go back to old habits.</li>
-          <li>60-minute Office Hours at week three. Bring the blockers, the weird outputs, the questions that came up when people actually tried it</li>
-          <li>Mini recap note after Office Hours: what came up, what patterns emerged, what to try next. One page. Shareable internally.</li>
+          <li>Everything in the Tailored Workshop (both sessions)</li>
+          <li>Centralized content hub: all session recordings and prompt materials in one place, shareable with your team</li>
+          <li>7-day activation challenge: one daily prompt nudge tied to real work</li>
+          <li>Prompt-a-thon: a live group challenge session 3 weeks after the final workshop to push adoption further</li>
+          <li>One-page recap after each session, shareable internally</li>
         </ul>
+        <div class="tier-result">
+          <div class="tier-result-label">What you get at week four</div>
+          <p>A team still using Copilot. Not because they were told to. Because the blockers that kill adoption at week two got cleared before they became excuses. The prompt-a-thon session is where casual users become consistent ones.</p>
+        </div>
         <p class="tier-note">
-          The week-three session is where most Copilot rollouts quietly fail. People tried it, hit one wall, and stopped. Office Hours clears those walls before they become permanent. It also tells you exactly where your next training focus should be.
+          The centralized hub means your team doesn't lose the material when the session ends. Everything is in one place, accessible to anyone you onboard later.
         </p>
       </div>
 
     </div>
 
-    <!-- ── ELEMENT 13: SCARCITY SIGNALS ── -->
+    <!-- AVAILABILITY -->
     <div class="section-label" style="margin-top: 2rem;">Availability</div>
     <h2>Current spots</h2>
 
     <div class="scarcity-row">
       <div class="scarcity-item">
-        <div class="scarcity-dot scarcity-dot--open"></div>
-        <span>Workshop Only (€950) · open</span>
+        <div class="scarcity-dot scarcity-dot--full"></div>
+        <span>Workshop Only (&euro;1,750) · currently closed</span>
       </div>
       <div class="scarcity-item">
         <div class="scarcity-dot scarcity-dot--limited"></div>
-        <span>Tailored Workshop (€1,250) · 2–3 slots/month</span>
+        <span>Tailored Workshop (&euro;4,750) · 2-3 slots/month</span>
       </div>
       <div class="scarcity-item">
         <div class="scarcity-dot scarcity-dot--limited"></div>
-        <span>Activation Track (€2,250) · 1–2 slots/month</span>
+        <span>Activation Track (&euro;10,350) · 1-2 slots/month</span>
       </div>
     </div>
 
     <p style="font-size: 0.9rem; color: rgba(15,23,42,0.6);">
-      Tailored and Activation Track sessions require intake and prep. I cap the number per month so the research is actually done properly, not squeezed in the night before.
+      Tailored and Activation Track sessions require intake and prep. I cap the number per month so the research is done properly, not squeezed in the night before.
     </p>
 
-    <!-- ── ELEMENT 14: ADD-ONS ── -->
+    <!-- ADD-ONS -->
     <div class="section-label" style="margin-top: 2.5rem;">Optional</div>
     <h2>If you need more than the session</h2>
 
     <div class="callout callout--green">
       <strong>Large groups (20+ attendees)</strong><br>
-      Above 20 people, the Tailored Workshop and Activation Track are scoped as a project: group size, number of departments, and whether you need split sessions. Get in touch and I'll give you a number.
+      Above 20 people, the Tailored Workshop and Activation Track are scoped as a project, based on group size, number of departments, and whether you need split sessions. Get in touch and I'll give you a number.
     </div>
 
     <div class="callout callout--green" style="margin-top: 0.75rem;">
       <strong>Standalone Office Hours</strong><br>
-      If you booked the Tailored Workshop and adoption stalled at week three anyway, a standalone Office Hours session is available. Same format, same price as the add-on. Ask when you book.
+      Booked the Tailored Workshop and adoption stalled at week three anyway? A standalone Office Hours session is available separately. Same format. Ask when you book.
     </div>
 
     <p style="font-size: 0.875rem; color: rgba(15,23,42,0.55); margin-top: 0.75rem;">
-      These exist for the situations that need them, not as a default upsell. If the session lands well, most teams don't need anything else.
+      These exist for situations that need them. If the session lands well, most teams don't need anything else.
     </p>
 
-    <!-- ── ELEMENT 15: THE GUARANTEE ── -->
+    <!-- COMMITMENT -->
     <div class="section-label" style="margin-top: 2.5rem;">My commitment</div>
-    <h2>What I stand behind</h2>
+    <h2>What you get from me</h2>
 
     <div class="guarantee-block">
-      <div class="guarantee-title">What I commit to</div>
+      <div class="guarantee-title">Relevance. Not a refund clause.</div>
       <p>
-        I don't offer a money-back clause. What I offer is relevance. You fill in the intake form honestly: your industry, your team's actual pain points, what they do day to day. I build the session around that. The prompts I demonstrate will apply to your team's real work. Not a generic scenario from someone else's webinar.
+        Every session is built for your team's actual context, their industry, their workflows, their real pain points.
+        The prompts I demonstrate will apply to work they do tomorrow, not a generic scenario pulled from last month's webinar.
+        The prompt doc arrives within 48 hours, formatted and ready to use without needing me in the room.
       </p>
       <p style="margin-top: 0.75rem; font-size: 0.9rem; color: rgba(15,23,42,0.65);">
-        The session works best when attendees give input, not by building prompts themselves, but by telling me what they actually deal with so I can show them something they recognise. That's the deal. I build, they direct, everyone leaves with something usable.
+        What I ask in return: fill in the intake form honestly, and have your team engaged during the session, not because they're expected to do anything, but because the more they tell me about their work, the sharper the demos get. That's the deal.
       </p>
     </div>
 
-    <!-- ── ELEMENT 16: HOW TO JOIN ── -->
+    <!-- CTA -->
     <div class="cta-section">
-      <h2>Book a session</h2>
-      <p>No application. No gatekeeping. Pick your tier, pick a date, and we sort the rest on the call.</p>
+      <h2>Let's talk first</h2>
+      <p>No commitment. We spend 20-30 minutes figuring out what your team actually needs and whether this is the right fit.</p>
+      <div class="cta-avail">&#x26A1; Tailored and Activation Track slots fill 2-3 weeks out.</div>
 
       <div class="cta-steps">
         <div class="cta-step">
           <div class="cta-step-num">1</div>
-          <span>Click the booking link and pick a date that works</span>
+          <span>Book a short call using the link below</span>
         </div>
         <div class="cta-step">
           <div class="cta-step-num">2</div>
-          <span>Tell me your team size, industry, and which tier you want. I'll confirm within 24 hours</span>
+          <span>We talk through your team, your context, and which format makes sense</span>
         </div>
         <div class="cta-step">
           <div class="cta-step-num">3</div>
-          <span>We run a short pre-session call, I build the content, and your team walks in ready</span>
+          <span>If it's a fit, I send a proposal within 24 hours. No pressure either way.</span>
         </div>
       </div>
 
-      <a href="file:///Users/vincentclaeys/Library/Application%20Support/Claude/local-agent-mode-sessions/811ee228-3d42-4e3d-9cb6-3529321ea519/6c15fa41-3e85-41d8-b722-5ec2689b87d3/local_a5354916-9dbb-44a5-8ff2-654f6c90b416/outputs/vincent-workshop-offer-page.html#" class="btn-cta">Book your session</a>
+      <a href="#" class="btn-cta">Book a discovery call &#x2192;</a>
 
-      <p class="urgency-line">Tailored slots fill 2–3 weeks out. The standard workshop is usually faster.</p>
+      <p class="urgency-line">1-2 Activation Track slots left this month. Tailored slots open for the next 2 weeks.</p>
     </div>
 
   </div><!-- /page-wrap -->
 
   <footer class="page-footer">
-    <p>Vincent Claeys &nbsp;·&nbsp; Microsoft 365 Copilot Adoption Workshops</p>
+    <p>Vincent Claeys &nbsp;&middot;&nbsp; Microsoft 365 Copilot Adoption Workshops</p>
     <p style="margin-top: 0.3rem;">vincent@unmuteme.eu</p>
   </footer>
 
-
-
-</body></html>
+</body>
+</html>
