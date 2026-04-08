@@ -516,6 +516,75 @@
       min-width: 90px;
     }
 
+    /* About / credibility block */
+    .about-block {
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+      background: var(--brand-dark);
+      border-radius: 12px;
+      padding: 1.75rem;
+      margin: 2rem 0;
+    }
+    .about-photo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 3px solid rgba(50,43,221,0.5);
+    }
+    .about-photo-placeholder {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      border: 3px solid rgba(50,43,221,0.5);
+      background: rgba(50,43,221,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Aptos', 'Calibri', sans-serif;
+      font-weight: 700;
+      font-size: 1.4rem;
+      color: rgba(255,255,255,0.7);
+    }
+    .about-body { flex: 1; }
+    .about-name {
+      font-family: 'Aptos', 'Calibri', 'Helvetica Neue', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #fff;
+      margin-bottom: 0.15rem;
+    }
+    .about-role {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 0.9rem;
+    }
+    .about-bio {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.65;
+      margin-bottom: 0.9rem;
+    }
+    .about-facts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem 0.6rem;
+    }
+    .about-fact {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      color: rgba(255,255,255,0.55);
+      background: rgba(255,255,255,0.07);
+      padding: 0.2rem 0.5rem;
+      border-radius: 3px;
+    }
+
     @media (min-width: 620px) {
       h1 { font-size: 3rem; }
       .scarcity-row { flex-direction: row; flex-wrap: wrap; gap: 0.75rem 1.5rem; }
@@ -598,6 +667,28 @@
 
     <div class="callout callout--blue">If that's you, keep reading.</div>
 
+    <!-- ABOUT / CREDIBILITY -->
+    <div class="section-label" style="margin-top: 2.5rem;">Who's behind this</div>
+    <div class="about-block">
+      <img src="https://media.licdn.com/dms/image/v2/D4E03AQEh0cPu8V17gA/profile-displayphoto-scale_200_200/B4EZv_9UomH8Ac-/0/1769525827575?e=1777507200&v=beta&t=TrnQMGQ7C6DD5bcJYDrUJHgcy1gvANLhh5TbmorQKLU" alt="Vincent Claeys" class="about-photo">
+      <div class="about-body">
+        <div class="about-name">Vincent Claeys</div>
+        <div class="about-role">Copilot Adoption Trainer</div>
+        <p class="about-bio">
+          I've delivered 70+ Copilot workshops across the globe. Before I ran a single session, I spent months actually using the tool on real work: meeting prep, proposal writing, data analysis, client communication. I know where it works well, where it fails, and how to show both honestly.
+        </p>
+        <p class="about-bio" style="margin-bottom: 0.9rem;">
+          I don't use Microsoft's slides. I don't pretend the tool is perfect. I show your team how to get real results with the licenses you've already paid for.
+        </p>
+        <div class="about-facts">
+          <span class="about-fact">70+ workshops</span>
+          <span class="about-fact">Active since [YEAR]</span>
+          <span class="about-fact">Global</span>
+          <span class="about-fact">4.63 / 5 avg rating</span>
+        </div>
+      </div>
+    </div>
+
     <!-- PARTICIPANT TESTIMONIALS -->
     <div class="section-label" style="margin-top: 2.5rem;">What participants say</div>
     <h2>From people who were in the room</h2>
@@ -620,24 +711,10 @@
       </div>
     </div>
 
-    <!-- STATS BAR -->
-    <div class="stats-bar" style="margin-top: 1.5rem;">
-      <div class="stat-item">
-        <div class="stat-number">4.63<span style="font-size:1rem;">/5</span></div>
-        <div class="stat-label">Average overall rating across 59 participants</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">92%</div>
-        <div class="stat-label">Rate the session 4 or 5 stars</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">4.25<span style="font-size:1rem;">/5</span></div>
-        <div class="stat-label">Average confidence with Copilot after the session</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">8/8</div>
-        <div class="stat-label">Partners willing to recommend working with me</div>
-      </div>
+    <!-- STAT -->
+    <div style="margin-top: 1.5rem; display: inline-flex; align-items: center; gap: 0.75rem; background: #fff; border: 1.5px solid rgba(15,23,42,0.1); border-radius: 8px; padding: 0.9rem 1.25rem;">
+      <span style="font-family: 'Aptos','Calibri','Helvetica Neue',sans-serif; font-size: 2rem; font-weight: 700; color: var(--brand-primary); line-height: 1;">4.63<span style="font-size: 1.1rem;">/5</span></span>
+      <span style="font-size: 0.82rem; color: rgba(15,23,42,0.55); line-height: 1.35;">Average rating<br>from workshop participants</span>
     </div>
 
     <!-- OUTCOMES -->
